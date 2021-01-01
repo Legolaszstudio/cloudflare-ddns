@@ -1,0 +1,23 @@
+{
+    "name": "cloudflare-ddns",
+    "version": "0.0.1",
+    "description": "Cloudflare Dynamic Dns",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Legolaszstudio/cloudflare-ddns.git"
+    },
+    "author": "Novy",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Legolaszstudio/cloudflare-ddns/issues"
+    },
+    "homepage": "https://github.com/Legolaszstudio/cloudflare-ddns#readme",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "requiem-http": "^1.2.1"
+    }
+}

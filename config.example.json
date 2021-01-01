@@ -1,0 +1,10 @@
+{
+    "cloudflare-api-key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "cloudflareEmail": "example@example.com",
+    "zone": "example.com",
+    "domains": [
+        "example.com",
+        "test.example.com",
+        "subdomain.example.com"
+    ]
+}
