@@ -42,9 +42,9 @@ Enter you domains as a string list into the `domains` field. Be careful as you h
 
 <details>
 <summary>Where can I find my domain names?</summary>
-Just go to the your zones dns page
+Just go to the your zone's dns page
 <img src="https://github.com/Legolaszstudio/cloudflare-ddns/blob/main/images/dns.PNG?raw=true" alt="Cloudflare DNS Example">
 <br>
 </details>
 
-## Docker coming soon
+### That's it, enjoy using the code!
