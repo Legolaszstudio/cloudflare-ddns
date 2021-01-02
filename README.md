@@ -32,7 +32,8 @@ Just enter the zone name you want the code to edit into the `zone` field. Curren
 
 <details>
 <summary>Where can I find my zone name?</summary>
-Just go to the cloudflare home page
+Just go to the cloudflare home page, and there are your zone names
+<img src="https://github.com/Legolaszstudio/cloudflare-ddns/blob/main/images/zoneName.PNG?raw=true" alt="Cloudflare HomePage Example">
 </details>
 
 ## Docker coming soon
