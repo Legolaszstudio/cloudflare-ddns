@@ -34,6 +34,17 @@ Just enter the zone name you want the code to edit into the `zone` field. Curren
 <summary>Where can I find my zone name?</summary>
 Just go to the cloudflare home page, and there are your zone names
 <img src="https://github.com/Legolaszstudio/cloudflare-ddns/blob/main/images/zoneName.PNG?raw=true" alt="Cloudflare HomePage Example">
+<br>
+</details>
+
+### Enter the domains you want the code to edit
+Enter you domains as a string list into the `domains` field. Be careful as you have enter the complete domain (`subdomain.example.com`), not just the subdomain part (<s>`subdomain`</s>). Also be careful as the code updates both the A and AAAA records for your domains.
+
+<details>
+<summary>Where can I find my domain names?</summary>
+Just go to the your zones dns page
+<img src="https://github.com/Legolaszstudio/cloudflare-ddns/blob/main/images/dns.PNG?raw=true" alt="Cloudflare DNS Example">
+<br>
 </details>
 
 ## Docker coming soon
