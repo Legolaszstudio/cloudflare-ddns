@@ -105,3 +105,6 @@ dist
 
 #Contains the configuration
 config.json
+
+#Log files
+logs/.
