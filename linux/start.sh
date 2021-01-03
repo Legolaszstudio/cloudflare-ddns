@@ -4,8 +4,7 @@
 cd ../
 
 #Delete logs older than 7 days
-find /logs/ -type f -mtime +7 -name '*.log' -execdir rm -- '{}' \;
+find logs/ -type f -mtime +7 -name '*.log' -execdir rm -- '{}' \;
 
 #Run node js with logging
-cd logs/ || exit
-node ../main.js > "$(date +%Y%m%d_%H%M%S).log" 2>&1
+node main.js > logs/"$(date +%Y%m%d_%H%M%S).log" 2>&1
