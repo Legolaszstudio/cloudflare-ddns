@@ -37,6 +37,7 @@ async function getCurrentIPs() {
         //Not everyone has ipv6
         ipv6 = null;
         console.warn("Seems like you have got no ipv6 address".yellow);
+        console.log(e);
     }
     return {
         ipv4: ipv4.body.ip,
