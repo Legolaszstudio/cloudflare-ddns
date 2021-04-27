@@ -9,7 +9,16 @@ async function main() {
     let config = readConfig();
     console.log("Read configuration file".magenta);
     let ipAdresses = await getCurrentIPs();
-    await updateCloudflareEntries(config, ipAdresses);
+    for (const key of config.domains) {
+        let curConfig = {
+            cloudflareApiKey: config.cloudflareApiKey,
+            cloudflareEmail: config.cloudflareEmail,
+            zone: key.zone,
+            domains: key.domains,
+        };
+        await updateCloudflareEntries(curConfig, ipAdresses);
+        console.log("\n");
+    }
     console.log("\n");
     console.log(`Bye! We successfully updated ${updateCounter} dns records! (${failureCounter} fails)`.cyan);
     console.log("\n");
@@ -93,7 +102,7 @@ async function updateCloudflareEntries(config, ipAdresses) {
     for (let element of domainsToEdit) {
         if (element.type == "A") {
             if (element.content == ipAdresses.ipv4) {
-                console.log(`Domain ${element.name} has not changed since last check`.magenta);
+                console.log(`Domain ${element.name} ipv4 has not changed since last check`.magenta);
             } else {
                 await changeDomainRecord({
                     config: config,
@@ -106,7 +115,7 @@ async function updateCloudflareEntries(config, ipAdresses) {
             }
         } else if (element.type == "AAAA") {
             if (element.content == ipAdresses.ipv6) {
-                console.log(`Domain ${element.name} has not changed since last check`.magenta);
+                console.log(`Domain ${element.name} ipv6 has not changed since last check`.magenta);
             } else {
                 if (ipAdresses.ipv6 == null) {
                     console.error(`Can't update ${element.name}'s AAAA record because this host doesn't have access to a ipv6 network connection`.red);
